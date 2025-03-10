@@ -35,6 +35,6 @@ Code for this task can be found in the file named "Categorization_Code_BoscoLoui
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
  <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="YOUR-ALT-TEXT" src="[YOUR-DEFAULT-IMAGE](https://www.vangoghmuseum.nl/en/collection/s0202V1962)">
+ <img alt="YOUR-ALT-TEXT" src="https://www.vangoghmuseum.nl/en/collection/s0202V1962">
 </picture>
 
