@@ -1,3 +1,42 @@
+03/24/2025
+
+Progress: What have you accomplished since last week’s post?
+
+After meeting with my client last friday, i understood their demand. They are looking for something like the seattle commute survey. I told them i will give it a shot. And so i learned how to
+get geocodes even if the data was collected in a very bad format. I learned how to use census maps and geopandas in python to analyze survey data this way. It was fun! I then got my first draft
+of the written product done.
+
+
+Problems: What are you stuck on or struggling with?
+
+Not exactly stuck on anything but struggling. I feel like I have done a lot here. 
+I have had to do quite some data engineering (data cleaning/transformation/combination/wrangling) for any kind of analysis i wanted to do. The survey was not designed or implemented in an
+analytical friendly way. I guess this will be a learning experience for them but it was a huge and terrible headache for me.
+
+I had to summarise the meanings in custom entry columns in the survey and so I worked with John to figure out how to use the openai aip in python.
+I have gotten deep into every survey question and now i have descriptive statistics on all of the questions and spent time with simona.
+Initially, i didnt know what to do with the project so I had tried to build a model to see which questions were good at guessing if someone was interested in an app or not.
+I did anova, logistic regression, random forests, xgboosts, and a chi-squared test to prove relation between two variables.
+
+Now after they requested a copy of the seattle commute survey
+but with montana survey data because that is what they had in mind when they did the survey, ive had to do a lot more work.
+
+I am not even going to get into all the work behind making a dashboard in power bi. Thats just been another work. When i look forward there are presentations 
+and stuff coming too and i have to manage work and have to travel for a week in april. Anyways, I am meeting with my client again this friday 
+and i have shared my first draft they requested with them. They have been very nice so far but im afraid when i go back to meet them, i feel 
+like they might ask me for more. hopefully they dont.
+
+I feel like I have done more work for the city this month than i have for the bank that pays me $. That's concerning. I hope all of this will be worth it oneday. lol
+
+Plans: What do you intend to accomplish between now and next week’s post?
+
+Have the dashboard ready to submit this sunday after geting feedback friday. Guess will have to write reviews for others' writtern products too.
+Make changes on the repo design and upload more code chunks. This might change depending on what feedback i get from my client.
+
+How many hours did you spend working on your Capstone since last week’s post?
+
+I spent about 20 hours.
+
 03/17/2025
 
 Progress: What have you accomplished since last week’s post?
