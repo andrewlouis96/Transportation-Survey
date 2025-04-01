@@ -1,40 +1,71 @@
-# City of Missoula - Department of Transportation
+# Missoula Downtown Commute Survey 2024
 
-The City of Missoula consucted a transportation survey inspired by the Seattle transportation survey. Although many questions were asked regarding the trasportation choices and patterns of people along with a few demographic information, the main aim of the survey was to see if people would be interested in an app that would help them choose more sustainable modes of transport.
+## Project Overview
 
-A preview of the survey can be found [here](https://missoulaparks.qualtrics.com/jfe/preview/previewId/f77cbedb-4863-4bd0-96d7-629c03e4a169/SV_1NsyG54i5twwOk6?Q_CHL=preview&Q_SurveyVersionID=current).
+This project analyzes data from a City of Missoula transportation survey inspired by the Seattle Commute Survey. While the survey captured a variety of transportation habits and demographic details, its primary aim was to understand potential interest in a mobile app that encourages more sustainable commuting options and map downtown employees travel pattern to work. A preview of the survey can be found [here](https://missoulaparks.qualtrics.com/jfe/preview/previewId/f77cbedb-4863-4bd0-96d7-629c03e4a169/SV_1NsyG54i5twwOk6?Q_CHL=preview&Q_SurveyVersionID=current).
 
-My task was to conduct an analysis on the survey results and deliver any insights back to the client through three formats. A digital product, a final presentation, and a scientific paper. This repository holds the documents for the analysis done on the scientific paper. 
+The final deliverables for this project include:
 
-> Like a kid chasing a crab on a shore that is full of crabs, there were numerous ideas to pursue at first. Eventually, I settled with a few research questions to consider.
+- A **digital product** for visual storytelling  
+- A **scientific paper** detailing the analysis and findings  
+- A **final presentation** to communicate insights to stakeholders
 
-**Question 1.) Linear Regression, Random Forest, and XGBoost Analysis Code:**
+This repository includes the scientific analysis used to support the paper.
 
-This process wasn't exactly designed properly. The survey was designed without consulting a data scientist and the survey responses sometimes are in formats we cannot use. More insight should have gone into how the survey was designed and what questions were asked. But, what if we could turn this negative into a positive? What if we could build a model that will predict what variables are good at predicting if someone would be interested in an app that would offer sustainable modes of transport? This would give us an insight into what questions in the survey were great at what we were trying to find and when it is time to run the survey again, we could make improvements on the survey by asking more questions that worked. This will also give us an insight into what type of people are interested in our product and who we should focus on.
+## Repository Structure
 
-Code for this task can be found in the file named "Analysis_Code_BoscoLouis_20250309".
+- `Analysis_Code_BoscoLouis_20250309.ipynb`: Machine learning model scripts to predict interest in the sustainable commuting app  
+- `Categorization_Code_BoscoLouis_20250309.ipynb`: Natural language processing code for summarizing free-text survey responses
+- `Geocode_BoscoLouis_03312025.ipynb`: Code that gets the geolocation codes for mapping approximate location of respondents homes and work.
+- `Maps_Code_BoscoLouis_03312025.ipynb`: Code that displays maps of transport patterns among different respondent groups.
+- `surveydata.csv`: Cleaned survey responses
+- `README.md`: This file
 
+## Research Questions and Methodology
 
-**Question 2.) Chi-Squared analysis Code:**
+### 1. Predictive Modeling (Logistic Regression, Random Forest, XGBoost)
 
-One question in the survey asked the survey takers to rank certain things based on their importance. They were things like time, cost, reliability, etc. We have certain demographic information about the respondents. Is there a relationship between these two? In other words, is there a pattern on how certain groups of people rank things based on importance?
+**Could we build a model to predict interest in a sustainable commuting app based on survey responses?**
 
-Code for this task is coming soon.
+Even though the survey wasn't optimized for machine learning, this task flipped a limitation into a strength. By modeling app interest, we identified the most predictive variables—offering a data-backed way to improve future survey design and outreach strategy.
 
-**Question 3.) Categorization Code:**
+📂 **Code:** `Analysis_Code_BoscoLouis_20250309.ipynb`
 
-There are two columns in the survey where people have given their input in text strings. The two questions were;
-Does you mode of transport change seasonally? If so, explain how.
-Do you have any general comments about trasportation in Missoula?
-Going through each individual reply is a painfully laborous task. What if we used LLMs to summarize the meaning in these columns for us?
+---
 
-Code for this task can be found in the file named "Categorization_Code_BoscoLouis_20250309".
+### 2. Commute Priorities by Demographics (Chi-Squared Tests)
 
-**Question 4.) TBD**
+**Are there patterns in how different demographic groups rank the importance of time, cost, reliability, and other commute factors?**
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
- <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="YOUR-ALT-TEXT" src="https://www.vangoghmuseum.nl/en/collection/s0202V1962">
-</picture>
+This analysis explores statistical relationships between demographic segments and what they value most in their commute, helping inform more equitable transportation planning.
 
+📂 **Code:** `Analysis_Code_BoscoLouis_20250309.ipynb`
+
+---
+
+### 3. Summarizing Open-Ended Survey Responses (LLM Categorization)
+
+**How can we analyze hundreds of open-ended responses quickly and effectively?**
+
+Two open-ended survey questions produced hundreds of long-form answers about seasonal commute changes and general thoughts on Missoula transportation. Instead of manually coding these responses, we used Large Language Models (LLMs) to categorize and summarize major themes. This approach saved time and provided scalable insights.
+
+📂 **Code:** `Categorization_Code_BoscoLouis_20250309.ipynb`
+
+---
+
+### 4. Geographic Patterns in Commutes (Geocoding & Mapping)
+
+**Where do people live and work, and how do commute patterns vary across Missoula?**
+
+We geocoded respondents' home and work locations to visualize commuting patterns across Missoula. These maps reveal how commuting behaviors differ by neighborhood and transportation mode. The goal was to replicate the Seattle Commute Survey’s geographic visualizations, adapted for Missoula. This work helps identify neighborhoods where targeted transportation improvements (e.g., transit access, bike lanes) would have the most impact.
+
+📂 **Code and outputs:** `Geocode_BoscoLouis_03312025.ipynb` - `Maps_Code_BoscoLouis_03312025.ipynb`:
+
+---
+
+## Technologies Used
+
+- **Python** (data cleaning, modeling, NLP)  
+- **Pandas & Geopandas & Scikit-learn** (data processing, ML, Geocoding)  
+- **XGBoost** (advanced modeling)  
+- **OpenAI API** (text summarization)
