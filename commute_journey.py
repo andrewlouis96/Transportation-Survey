@@ -14,7 +14,7 @@ st.set_page_config(page_title="Missoula Commute Journey", layout="wide")
 
 st.title("🛣️ From A to B: Missoula's Commute Story")
 
-st.image("/Users/louis/Pictures/Picture1.jpg", caption="Downtown Missoula Survey Coverage")
+st.image("Picture1.jpg", caption="Downtown Missoula Survey Coverage")
 
 # ===============================
 # 🧩 Mini-Survey (Guess Your Income)
