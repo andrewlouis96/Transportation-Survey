@@ -69,7 +69,7 @@ race_group = st.selectbox(
 # ===============================
 
 try:
-    with open('/Users/louis/Downloads/random_forest_income_model.pkl', 'rb') as file:
+    with open('random_forest_income_model.pkl', 'rb') as file:
         rf_model = pickle.load(file)
 
     input_features = {}
