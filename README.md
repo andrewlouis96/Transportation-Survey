@@ -18,6 +18,8 @@ This repository includes the scientific analysis used to support the paper.
 - `Categorization_Code_BoscoLouis_20250309.ipynb`: Natural language processing code for summarizing free-text survey responses
 - `Geocode_BoscoLouis_03312025.ipynb`: Code that gets the geolocation codes for mapping approximate location of respondents homes and work.
 - `Maps_Code_BoscoLouis_03312025.ipynb`: Code that displays maps of transport patterns among different respondent groups.
+- `commute_journey.py`: Code that creates a website on streamlit to convey the results along with a guessing game.
+- `random_forest_income_model.pkl`: Code that uses a model on the website to guess the income based on a few questions.
 - `surveydata.csv`: Cleaned survey responses
 - `README.md`: This file
 
@@ -63,9 +65,20 @@ We geocoded respondents' home and work locations to visualize commuting patterns
 
 ---
 
+### 5. Digital Product (Website & Game)
+
+**Convey survey results through a fun and interactive website.**
+
+ [website link](https://transportation-survey-a6vayp2jrvnmmyagyg6k8e.streamlit.app)
+
+📂 **Code and outputs:** `commute_journey.py` - `random_forest_income_model.pkl`:
+
+---
+
 ## Technologies Used
 
 - **Python** (data cleaning, modeling, NLP)  
 - **Pandas & Geopandas & Scikit-learn** (data processing, ML, Geocoding)  
 - **XGBoost** (advanced modeling)  
 - **OpenAI API** (text summarization)
+- **Streamlit** (website hosting)
