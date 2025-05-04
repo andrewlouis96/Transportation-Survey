@@ -142,7 +142,8 @@ try:
 
     predicted_income = income_labels.get(pred_income_class, "an unknown range")
 
-    st.success(f"🎉 Based on your answers, we guess your income is: **{predicted_income}**!")
+    st.subheader("🎉 Based on your answers, we guess your income is:")
+    st.markdown(f"### 💰 `{predicted_income}`")
 
 except Exception as e:
     st.error(f"Prediction failed.\n\nError Details: {e}")
