@@ -142,7 +142,8 @@ try:
 
     predicted_income = income_labels.get(pred_income_class, "an unknown range")
 
-    st.success(f"🎉 Based on your answers, we guess your income is: **{predicted_income}**!")
+    st.subheader("🎉 Based on your answers, we guess your income is:")
+    st.markdown(f"### 💰 `{predicted_income}`")
 
 except Exception as e:
     st.error(f"Prediction failed.\n\nError Details: {e}")
@@ -178,10 +179,28 @@ Analysis was conducted using Python (Pandas, scikit-learn), and geocoding was co
 
 st.header("Demographics")
 
-st.write("""
-- The majority of survey respondents were aged 25–44.
-- 84.1% of respondents identified as White/Caucasian.
-- Income levels varied, but the largest single group (34.4%) earned $50,000–$74,999 annually.
+st.write(f"""
+Three demographic questions regarding age, income, and race were asked in the survey. The results are as follows:
+
+- Almost a third of respondents (**29.1%**) fell within the **35–44** age range, followed by the **25–34** age range (**26.8%**) and the **45–54** age range (**21.5%**).  
+  The oldest group, **55–64**, contributed to **14%**, and the youngest group, **18–24**, contributed **5.6%**.  
+  People over **65** were **2.4%**, and **0.5%** preferred not to answer.
+
+- More than a third (**34.4%**) of the population that answered the income question (**N=707**) fell in the `$50,000 to $74,999` income group.  
+- The second largest group (**22.9%**) was the `$35,000 to $49,999` group, followed by the `$75,000 to $99,999` group (**16.8%**).  
+- **9.3%** make about `$100,000 to $149,999`, and **5.7%** make `$150,000 or more`.  
+
+On the lower end:  
+- `$25,000 to $34,999`: **6.4%**  
+- `$15,000 to $24,999`: **3.8%**  
+- `Less than $15,000`: **0.7%**
+
+- Regarding race (**N=719**):  
+  - **84.1%** identified as **White/Caucasian**  
+  - **11.1%** reported **multiple ethnicities**  
+  - **1.8%** were **Hispanic**  
+  - **1.5%** were **American Indian or Alaskan Native**  
+  - **0.7%** each identified as **Asian/Pacific Islander** and **Black or African American**
 """)
 
 # ===============================
@@ -191,7 +210,7 @@ st.write("""
 st.header("Commute Modes")
 
 st.write("""
-Driving alone was the most common mode (71.1%), followed by biking (7.3%), carpooling/vanpooling (6.1%), walking (5.9%), and bussing (3.5%).
+The most common primary mode of commuting reported was driving alone, with over 71.1% of respondents selecting it as their usual method. This was followed by biking, carpooling/vanpooling, walking, telecommuting, and taking the bus. A small portion of respondents reported using other forms of commuting, such as e-bikes, Uber/Lyft, or taxis.
 """)
 
 # ===============================
@@ -201,8 +220,8 @@ Driving alone was the most common mode (71.1%), followed by biking (7.3%), carpo
 st.header("Remote Work Patterns")
 
 st.write("""
-About one-third of employees reported working remotely at least one day per week.  
-Remote work frequency was higher among higher-income groups.
+Roughly one-third of respondents reported working remotely at least one day per week. Of those, most had some formal remote work policy through their employer.
+Remote work frequency was notably higher among higher-income individuals. For example, 39.4% of people who said they work remotely make about $50,000 to $74,999 in annual income, and 35.9% of people who make $150,000 or more said they work remotely.
 """)
 
 # ===============================
